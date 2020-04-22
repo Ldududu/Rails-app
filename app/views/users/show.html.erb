@@ -1,4 +1,11 @@
-<h1>
-  <%= image_tag "/user_images/#{@user.image_name}", alt: "user icon", id:"user-icon" %>
-  <%= @user.name %> 
-</h1>
+
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user-info">
+      <h1>
+        <%= image_tag "/user_images/#{@user.image_name}", alt: "user icon", id:"user-icon" %>
+        <%= @user.name %> 
+      </h1>
+    </section>
+  </aside>
+</div>

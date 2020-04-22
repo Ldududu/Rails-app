@@ -1,6 +1,14 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+/* mixin */
+
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
 /* universal */
 
  body {
@@ -74,4 +82,44 @@ header {
 
 .btn {
   font-size: 2.5em;
+}
+
+/* sidebar */
+
+aside {
+  section.user-info {
+    margin-top: 20px;
+  }
+  section {
+    padding: 10px 0;
+    margin-top: 20px;
+    &:first-child {
+      border: 0;
+      padding-top: 0;
+    }
+  }
+  h1 {
+    font-size: 1.5em;
+    text-align-last: left;
+    margin-top: 0;
+    margin-bottom: 3px;
+  }
+}
+#user-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 40%;
+  object-fit: cover;
+}
+
+/* forms */
+input {
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 4px;
+  outline: none;
+  height: auto !important;
+  @include box_sizing;
 }
