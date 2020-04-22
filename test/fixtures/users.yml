@@ -1,0 +1,5 @@
+sample1:
+  name: sample1
+  email: sample1@sample.com
+  password_digest: <%= User.digest('password') %>
+  image_name: default.png
