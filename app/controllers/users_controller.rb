@@ -18,7 +18,8 @@ class UsersController < ApplicationController
       image_name: "default.png"
     )
     if @user.save
-
+      flash[:success] = "Welcome to the Rails App!"
+      redirect_to user_url(@user)
     else
       render 'new'
     end
