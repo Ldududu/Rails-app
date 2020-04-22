@@ -18,6 +18,7 @@ class UsersController < ApplicationController
       image_name: "default.png"
     )
     if @user.save
+      log_in @user
       flash[:success] = "Welcome to the Rails App!"
       redirect_to user_url(@user)
     else
