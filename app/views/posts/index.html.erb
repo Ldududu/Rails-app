@@ -1,2 +1,26 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+<h1>投稿一覧</h1>
+
+<div class="col-md-10 col-md-offset-1">
+  <h3>Posts (<%= @posts.count %>)</h3>
+  <% @posts.each do |post| %>
+    <ol class="posts">
+    <li>
+      <%= image_tag "/user_images/#{post.user.image_name}", alt: "user icon", id:"user-icon" %>
+      <span class="user"><%= link_to post.user.name, post.user %></span>
+      <span class="title"><%= post.title %></span>
+      <span class="picture">
+        <%= image_tag post.picture.url if post.picture? %>
+      </span>
+      <span class="content"><%= post.content %></span>
+      <span class="timestamp">
+        Posted <%= time_ago_in_words(post.created_at) %> ago.
+        <% if current_user == post.user %>
+          <%= link_to "delete", post, method: :delete,
+                                       data: { confirm: "You sure?" } %>
+        <% end %>
+      </span>
+    </li>
+    </ol>
+  <% end %>
+  <%= will_paginate @posts, :previous_label => ' &lt 前へ', :next_label => '次へ &gt' %>
+</div>
