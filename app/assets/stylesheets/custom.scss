@@ -21,6 +21,7 @@
 
  textarea {
    resize: none;
+   margin-bottom: 20px;
  }
 
  .center {
@@ -163,5 +164,41 @@ input {
     overflow: auto;
     padding: 10px 0;
     border-bottom: 1px solid black;
+  }
+}
+
+/* posts */
+
+.posts {
+  list-style: none;
+  padding: 0;
+  li {
+    padding-bottom: 20px;
+    padding-right: 20px;
+    padding-left: 10px;
+    margin: 100px 0;
+    border: 1px solid  black;
+  }
+  .user {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  .title, .content {
+    display: block;
+    margin-left: 70px;
+  }
+  .title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+  .content {
+    font-size: 24px;
+  }
+  .timestamp {
+    color: #a0a0a0;
+    display: block;
+    text-align: right;
   }
 }
