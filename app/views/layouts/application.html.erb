@@ -11,11 +11,7 @@
   <body>
     <header class="navbar navbar-fixed-top">
       <div class="container">
-        <% if !logged_in? %>
           <%= link_to "Rails app", root_path, id: "logo" %>
-        <% else %>
-          <li class="logo-login">Rails app</li>
-        <% end %>
        <nav class="nav navbar-nav navbar-right">
         <% if logged_in? %>
           <li><%= link_to "Index", posts_path %></li>

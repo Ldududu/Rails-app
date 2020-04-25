@@ -3,7 +3,10 @@ class PostsController < ApplicationController
   before_action :correct_user,   only: :destroy
 
   def index
-    @posts = Post.paginate(page: params[:page], per_page: 5)
+    if logged_in?
+      @post  = current_user.posts.build
+      @feed_items = current_user.feed.paginate(page: params[:page])
+    end
   end
 
   def new
