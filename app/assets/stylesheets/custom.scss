@@ -13,6 +13,7 @@
 
  body {
   padding-top: 160px;
+  color: #444444;
  }
 
  section {
@@ -26,9 +27,6 @@
 
  .center {
    text-align: center;
-   h1 {
-     margin-bottom: 30px;
-   }
  }
 
  /* typography */
@@ -58,23 +56,24 @@ p {
 /* header */
 
 header {
-  background-color: red;
+  a {
+    color: #444444;
+  }
 }
 
 #logo {
   float: left;
   font-size: 1.8em;
-  color: white;
   font-weight: bold;
   padding-top: 7px;
   &:hover {
+    color: #444444;
     text-decoration: none;
     opacity: .8;
   }
 }
 
 .nav a {
-  color: white;
   font-size: 1.1em;
   &:hover {
     color: black;
@@ -83,6 +82,29 @@ header {
 
 .btn {
   font-size: 2.5em;
+  background-color: #fc9a08;
+  &:hover {
+    opacity: .8;
+  }
+}
+
+/* top */
+
+.title {
+  font-size: 16em;
+  margin-bottom: 70px;
+}
+
+.signup {
+  color: white;
+  background-color: #fc9a08;
+  width: 250px;
+  height: 80px;
+  line-height: 65px;
+  &:hover {
+    color: white;
+    opacity: .8;
+  }
 }
 
 /* sidebar */
@@ -253,4 +275,12 @@ input {
     display: block;
     text-align: right;
   }
+}
+
+
+@media screen and (max-width: 767px) {
+  .title {
+    font-size: 10em;
+  }
+  
 }
