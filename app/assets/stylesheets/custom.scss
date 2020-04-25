@@ -1,13 +1,15 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-/* mixin */
+/* mixin  variables */
 
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
   -webkit-box-sizing: border-box;
   box-sizing:         border-box;
 }
+
+$btn-color: #fc9a08;
 
 /* universal */
 
@@ -36,7 +38,7 @@
  }
 
  h1 {
-   font-size: 4em;
+   font-size: 3em;
    margin-bottom: 30px;
    text-align: center;
  }
@@ -82,9 +84,11 @@ header {
 
 .btn {
   font-size: 2.5em;
-  background-color: #fc9a08;
+  background-color: $btn-color;
+  color: white;
   &:hover {
     opacity: .8;
+    color: white;
   }
 }
 
@@ -96,15 +100,9 @@ header {
 }
 
 .signup {
-  color: white;
-  background-color: #fc9a08;
   width: 250px;
   height: 80px;
   line-height: 65px;
-  &:hover {
-    color: white;
-    opacity: .8;
-  }
 }
 
 /* sidebar */
@@ -282,5 +280,4 @@ input {
   .title {
     font-size: 10em;
   }
-  
 }
