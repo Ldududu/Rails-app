@@ -112,7 +112,7 @@ aside {
     font-size: 1.5em;
     text-align-last: left;
     margin-top: 0;
-    margin-bottom: 3px;
+    margin-bottom: 10px;
   }
 }
 #user-icon {
@@ -150,6 +150,20 @@ aside {
   color: white;
 }
 
+#follow {
+  margin: 20px;
+  width: 200px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.users.follow {
+  padding: 0;
+}
+
+.my-view {
+  margin-right: 10px;
+}
 
 /* forms */
 form {
@@ -241,6 +255,7 @@ input {
     margin-top: 60px;
     margin-bottom: 40px;
     font-size: 24px;
+    white-space: pre-wrap;
   }
   .timestamp {
     color: #a0a0a0;
