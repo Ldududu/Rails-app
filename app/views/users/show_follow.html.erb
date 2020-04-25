@@ -6,8 +6,8 @@
       <%= image_tag "/user_images/#{@user.image_name}", alt: "user icon", id:"user-icon" %>
       <%= @user.name %>
       </h1>
-      <span><%= link_to "view my profile", @user, class: "my-view" %></span>
-      <span><b>Posts:</b> <%= @user.posts.count %></span>
+      <span><%= link_to "プロフィール", @user, class: "my-view" %></span>
+      <span><b>投稿:</b> <%= @user.posts.count %></span>
     </section>
     <section class="stats">
       <%= render 'shared/stats' %>

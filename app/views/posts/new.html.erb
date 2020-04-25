@@ -5,15 +5,15 @@
     <%= form_for(@post, url: posts_path) do |f| %>
       <%= render 'shared/error_messages', object: f.object %>
 
-      <%= f.label :title %>
+      <%= f.label :title , "タイトル"%>
       <%= f.text_field :title, class: 'form-control' %>
-
-      <%= f.label :content %>
-      <%= f.text_area :content, class: 'form-control', rows: 10 %>
 
       <span class="picture">
         <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
       </span>
+
+      <%= f.label :content, "内容" %>
+      <%= f.text_area :content, class: 'form-control', rows: 10 %>
 
       <%= f.submit "投稿する", class:"btn" %>
     <% end %>
