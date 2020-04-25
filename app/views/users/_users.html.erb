@@ -1,0 +1,10 @@
+<% @users.each do |user| %>
+  <li>
+    <%= image_tag "/user_images/#{user.image_name}", alt: "user icon", id:"user-icon" %>
+    <%= link_to user.name, user_path(user), class: "user-name" %>
+    <% if current_user.admin? && !(user == current_user) %>
+      | <%= link_to "delete", user, method: :delete,
+                                  data: { confirm: "You sure?" } %>
+    <% end %>
+  </li>
+<% end %>
