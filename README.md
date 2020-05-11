@@ -1,24 +1,53 @@
-# README
+# Diary
+200~400文字の文章と画像（未選択可能）を投稿できる1日の出来事を投稿できる日記のようなアプリです
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 機能
 
-Things you may want to cover:
+・ユーザー管理機能（gem未使用）
 
-* Ruby version
+ 管理ユーザー機能
 
-* System dependencies
+ 新規登録機能
 
-* Configuration
+ 登録情報変更機能（プロフィール画像設定可能）
 
-* Database creation
+ アカウント削除機能（管理ユーザーによる）
 
-* Database initialization
+ ユーザー一覧表示機能
 
-* How to run the test suite
+・セッション
 
-* Services (job queues, cache servers, search engines, etc.)
+ ログイン、ログアウト機能
 
-* Deployment instructions
+ リメンバーミー機能
 
-* ...
+・投稿
+
+ 記事投稿（タイトル、内容(200~400文字)、画像）機能
+
+ 記事削除機能
+
+ マイページで自分の投稿一覧表示機能
+
+ フォローしているユーザーの投稿一覧表示機能
+
+・その他
+
+ フォロー、アンフォロー機能（Ajax）
+
+ ページネーション機能
+
+ 本番環境での画像の保存先にS3使用
+
+![画面収録 2020-04-26 9 33 41 mov](https://user-images.githubusercontent.com/62293842/81534262-b8a49400-93a2-11ea-9ccc-dc8b6e8f7b4b.gif)
+
+![画面収録 2020-04-26 9 45 16 mov](https://user-images.githubusercontent.com/62293842/81534355-e25dbb00-93a2-11ea-9f21-be0a6ece1bea.gif)
+
+![画面収録 2020-04-26 9 41 14 mov](https://user-images.githubusercontent.com/62293842/81534383-edb0e680-93a2-11ea-95c4-7e045f3de1de.gif)
+
+## 実行
+
+```
+$ bundle install
+$ rails s
+```
