@@ -7,6 +7,7 @@ class Post < ApplicationRecord
   validates :title, presence: true, length: { maximum: 40 }
   validate :picture_size
 
+
   private
 
     # アップロードされた画像のサイズをバリデーションする
